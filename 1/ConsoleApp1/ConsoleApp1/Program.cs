@@ -9,14 +9,16 @@ namespace ConsoleApp1
     public delegate string MyDelegate(int arg1, int arg2);
 
 
-    class MyClass
-    {
-        public string InstanceMethod(int arg1, int arg2)
-        {
+    #region Regular Delegate
+    //class MyClass
+    //{
+    //    public string InstanceMethod(int arg1, int arg2)
+    //    {
 
-            return ((arg1 + arg2) * arg1).ToString();
-        }
-    }
+    //        return ((arg1 + arg2) * arg1).ToString();
+    //    }
+    //} 
+    #endregion
 
 
     class Program
@@ -41,6 +43,14 @@ namespace ConsoleApp1
             //MyClass mc = new MyClass();
             //f = mc.InstanceMethod;
             //Console.WriteLine("The number is " + f(10, 20));
+            #endregion
+
+            #region Anonymous function delegate
+            //MyDelegate f = delegate (int arg1, int arg2)
+            //{
+            //    return (arg1 + arg2).ToString();
+            //};
+            //Console.WriteLine(f(10, 20));
             #endregion
 
 
