@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public delegate string MyDelegate(int arg1, int arg2);
+    //public delegate string MyDelegate(int arg1, int arg2);
+    //public delegate void MyDelegate(int arg1, int arg2);
+    public delegate void MyDelegate(int arg1, ref int arg2);
 
 
     #region Regular Delegate
@@ -34,6 +36,21 @@ namespace ConsoleApp1
         //} 
         #endregion
 
+        #region Composoble Delegate
+        //static void func1(int arg1, int arg2)
+        //{
+        //    string result = (arg1 + arg2).ToString();
+        //    Console.WriteLine(result);
+            
+        //}
+        //static void func2(int arg1, int arg2)
+        //{
+        //    string result = (arg1 * arg2).ToString();
+        //    Console.WriteLine(result);
+
+        //}
+        #endregion
+
         static void Main(string[] args)
         {
             #region Regular Delegate
@@ -53,12 +70,31 @@ namespace ConsoleApp1
             //Console.WriteLine(f(10, 20));
             #endregion
 
+            #region Composoble Delegate
+
+            //MyDelegate f1 = func1;
+            //MyDelegate f2 = func2;
+            //MyDelegate f1f2 = f1 + f2;
+
+            //Console.WriteLine("Calling the first delegate");
+            //f1(10, 20);
+            //Console.WriteLine("Calling the first delegate");
+            //f2(10, 20);
+            //Console.WriteLine("Calling the first delegate");
+            //f1f2(10, 20);
+
+            #endregion
+
+            #region Composoble Delegate 2
+
+            #endregion
 
 
 
 
 
             Console.ReadLine();
+
         }
 
 
